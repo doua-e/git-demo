@@ -1,18 +1,31 @@
 name: First Workflow
 
 on: [push, workflow_dispatch]
+
 jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello World
+      - name: Get Info
         run: |
-          echo "Hello World"
-          echo "Another line"
+          hostname
+          pwd
+          ls -l /
 
-      - name: Print a second step
-        run: echo "Another Step"
+      - name: Create a file
+        run: |
+          ls -al
+          echo "One line" | tee myFile.log
+          ls -al
 
-      - name: print anothoer python line
-        shell: python
-        run: print("woow")
+      - name: A final step
+        run: ls -al
+
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if file is there
+        run: |
+          hostname
+          pwd
+          ls -al
