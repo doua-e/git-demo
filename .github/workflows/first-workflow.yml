@@ -23,7 +23,9 @@ jobs:
 
   second-job:
     runs-on: ubuntu-latest
+    env:
+      MY_ENV_VAR = "this is th e end"
     steps:
       - name: test enverement variable
         run: |
-          echo "value: ${{ env.MY_ENV_VAR}} "
+          echo "value: $MY_ENV_VAR "
