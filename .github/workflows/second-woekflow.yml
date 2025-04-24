@@ -17,3 +17,7 @@ jobs:
 
       - name: List content
         run: ls -al
+      - name: Run the server
+        run: npm run dev < /dev/null & npx wait-on "http://localhost:5173" --timeout 10s
+      - name: Cypress Tests
+        run: npx cypress run
