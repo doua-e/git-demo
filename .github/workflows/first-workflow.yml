@@ -26,4 +26,4 @@ jobs:
     steps:
       - name: test enverement variable
         run: |
-          echo "value:$MY_ENV_VAR"
+          echo "value: ${{ env.MY_ENV_VAR}} "
