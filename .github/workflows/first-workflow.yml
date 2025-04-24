@@ -24,8 +24,8 @@ jobs:
   second-job:
     runs-on: ubuntu-latest
     env:
-      MY_ENV_VAR = "this is th e end"
+      MY_ENV_VAR: "this is the end"
     steps:
-      - name: test enverement variable
+      - name: Test environment variable
         run: |
-          echo "value: $MY_ENV_VAR "
+          echo "value: $MY_ENV_VAR"
