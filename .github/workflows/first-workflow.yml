@@ -8,6 +8,7 @@ jobs:
       - name: Print Hello World
         run: |
           echo "Hello World"
+          sleep 600
           echo "Another line"
 
       - name: Print a second step
