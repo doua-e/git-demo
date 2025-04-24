@@ -28,7 +28,6 @@ jobs:
     steps:
       - name: Test environment variable
         run: |
-          echo "value: ${{MY_ENV_VAR}}"
           echo "secret: ${{ secrets.MY_SECRET_VAR}}"
       - name:  get github context
         run: |
